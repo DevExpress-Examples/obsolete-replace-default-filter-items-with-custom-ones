@@ -65,9 +65,9 @@
             this.cbEnableCustomFilterPopup.AutoSize = true;
             this.cbEnableCustomFilterPopup.Location = new System.Drawing.Point(12, 6);
             this.cbEnableCustomFilterPopup.Name = "cbEnableCustomFilterPopup";
-            this.cbEnableCustomFilterPopup.Size = new System.Drawing.Size(158, 17);
+            this.cbEnableCustomFilterPopup.Size = new System.Drawing.Size(163, 17);
             this.cbEnableCustomFilterPopup.TabIndex = 0;
-            this.cbEnableCustomFilterPopup.Text = "Enable Filter Popup Ranges";
+            this.cbEnableCustomFilterPopup.Text = "Enable Custom Filter Ranges";
             this.cbEnableCustomFilterPopup.UseVisualStyleBackColor = true;
             this.cbEnableCustomFilterPopup.CheckedChanged += new System.EventHandler(this.cbEnableCustomFilterPopup_CheckedChanged);
             // 
@@ -78,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(748, 537);
             this.Controls.Add(this.splitContainer1);
             this.Name = "CustomFilterPopupForm";
-            this.Text = "Form1";
+            this.Text = "Custom Ranges in Popup Filter";
             this.Load += new System.EventHandler(this.CustomFilterPopupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGrid)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

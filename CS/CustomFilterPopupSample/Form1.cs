@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
-namespace CustomFilterPopupSample {
-    public partial class CustomFilterPopupForm : Form {
+namespace CustomFilterPopupSample
+{
+    public partial class CustomFilterPopupForm : XtraForm {
         public CustomFilterPopupForm() {
             InitializeComponent();
         }
         private void CustomFilterPopupForm_Load(object sender, EventArgs e) {
             CustomizePivotGrid(pivotGrid);
+            pivotGrid.BestFit();
         }
 
         private void cbEnableCustomFilterPopup_CheckedChanged(object sender, EventArgs e) {
