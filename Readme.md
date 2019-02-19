@@ -13,6 +13,7 @@ You can group individual items in a filter popup based on a criteria and display
 
 ![screenshot](https://github.com/DevExpress-Examples/how-to-replace-default-filter-items-with-custom-ones-e3638/blob/13.1.4%2B/images/screenshot.png)
 
+
 **See also:**
 
 * [Filtering](https://docs.devexpress.com/WindowsForms/1811)
