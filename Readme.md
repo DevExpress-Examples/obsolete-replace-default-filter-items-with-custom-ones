@@ -5,11 +5,12 @@
 * [Form1.cs](./CS/CustomFilterPopupSample/Form1.cs) (VB: [Form1.vb](./VB/CustomFilterPopupSample/Form1.vb))
 * [GroupedFilterPopupItem.cs](./CS/CustomFilterPopupSample/GroupedFilterPopupItem.cs) (VB: [GroupedFilterPopupItem.vb](./VB/CustomFilterPopupSample/GroupedFilterPopupItem.vb))
 <!-- default file list end -->
-# How to replace default filter items with custom ones
+# How to Modify a Filter Popup to Show Custom Filter Items
 
+This example demonstrate how to replace default filter items with custom items in a filter popup. 
 
-<p>In some situation it can be helpful to replace default items with custom ones. E.g. if you have too many items they can be convenient for grouping them based upon certain criteria and displaying group items in a filter popup. It is possible to handle the <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfPivotGridPivotGridControl_CustomFilterPopupItemstopic">CustomFilterPopupItems </a> event to remove default items and add group items instead. To apply a filter based upon the selected by end-users, handle the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_FieldFilterChangingtopic">PivotGridControl.FieldFilterChanging</a> event.</p>
+You can group individual items in a filter popup based on a criteria and display groups instead of items to save space. Handle the [PivotGridControl.CustomFilterPopupItems](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomFilterPopupItems)  event to substitute default items with group items. To process group items and apply a filter, handle the [PivotGridControl.FieldFilterChanging](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.FieldFilterChanging) event.
 
-<br/>
+**See also:**
 
-
+* [Filtering](https://docs.devexpress.com/WindowsForms/1811)
