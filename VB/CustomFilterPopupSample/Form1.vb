@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -12,10 +11,11 @@ Imports DevExpress.XtraEditors
 Namespace CustomFilterPopupSample
 	Partial Public Class CustomFilterPopupForm
 		Inherits Form
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
-		Private Sub CustomFilterPopupForm_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+		Private Sub CustomFilterPopupForm_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 			CustomizePivotGrid(pivotGrid)
 		End Sub
 

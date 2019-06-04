@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -46,7 +45,7 @@ Namespace CustomFilterPopupSample
 					Continue For
 				End If
 				Dim groupValue As String = GetGroupByItem(item)
-				If (Not ranges.Keys.Contains(groupValue)) Then
+				If Not ranges.Keys.Contains(groupValue) Then
 					ranges.Add(groupValue, New List(Of Object)())
 				End If
 				ranges(groupValue).Add(item)
@@ -61,7 +60,7 @@ Namespace CustomFilterPopupSample
 		End Sub
 		Private Sub RemoveNonBlankFilterItems(ByVal filterItemsCollection As IList(Of PivotGridFilterItem))
 			For i As Integer = filterItemsCollection.Count - 1 To 0 Step -1
-				If (Not filterItemsCollection(i).IsBlank) Then
+				If Not filterItemsCollection(i).IsBlank Then
 					filterItemsCollection.RemoveAt(i)
 				End If
 			Next i
@@ -87,22 +86,22 @@ Namespace CustomFilterPopupSample
 			Return If(targetField.ActualDataType Is GetType(DateTime), GetGroupByDate(CDate(item.Value)), GetGroupByDisplayText(item.Text))
 		End Function
 		Private Function GetGroupByValue(ByVal value As Object) As String
-			Return If(targetField.ActualDataType Is GetType(DateTime), GetGroupByDate(CDate(value)), GetGroupByDisplayText(targetField.GetDisplayText(value)))
+			Return If(targetField.ActualDataType Is GetType(DateTime), GetGroupByDate(DirectCast(value, DateTime)), GetGroupByDisplayText(targetField.GetDisplayText(value)))
 		End Function
 		Private Function IsValueInStringInterval(ByVal range As String, ByVal item As String) As Boolean
 			Dim rangeBounds() As String = range.Split("-"c)
 			Dim itemUpper As String = item.ToUpper()
-			Return itemUpper.Substring(0, System.Math.Min(rangeBounds(0).Length, itemUpper.Length)).CompareTo(rangeBounds(0).ToUpper()) >= 0 AndAlso itemUpper.Substring(0, System.Math.Min(rangeBounds(1).Length, itemUpper.Length)).CompareTo(rangeBounds(1).ToUpper()) <= 0
+			Return itemUpper.Substring(0, Math.Min(rangeBounds(0).Length, itemUpper.Length)).CompareTo(rangeBounds(0).ToUpper()) >= 0 AndAlso itemUpper.Substring(0, Math.Min(rangeBounds(1).Length, itemUpper.Length)).CompareTo(rangeBounds(1).ToUpper()) <= 0
 		End Function
 		Private Function GetGroupByDate(ByVal itemDate As DateTime) As String
-			Dim lastWeekFirstDay As DateTime = DateTime.Now.AddDays(-6 - CInt(Fix(DateTime.Now.DayOfWeek)))
+			Dim lastWeekFirstDay As DateTime = DateTime.Now.AddDays(-6 - CInt(DateTime.Now.DayOfWeek))
 			If itemDate <= lastWeekFirstDay.AddDays(-1) Then
 				Return "Earlier"
 			End If
 			If itemDate >= lastWeekFirstDay AndAlso itemDate <= lastWeekFirstDay.AddDays(6) Then
 				Return "Last Week"
 			End If
-			If itemDate >= DateTime.Now.AddDays(- CInt(Fix(DateTime.Now.DayOfWeek))) AndAlso itemDate < DateTime.Today Then
+			If itemDate >= DateTime.Now.AddDays(- CInt(DateTime.Now.DayOfWeek)) AndAlso itemDate < DateTime.Today Then
 				Return "This Week"
 			End If
 			If itemDate= DateTime.Today Then

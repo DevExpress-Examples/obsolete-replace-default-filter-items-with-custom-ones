@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Namespace CustomFilterPopupSample
+﻿Namespace CustomFilterPopupSample
 	Partial Public Class CustomFilterPopupForm
 		''' <summary>
 		''' Required designer variable.
@@ -71,7 +69,8 @@ Namespace CustomFilterPopupSample
 			Me.cbEnableCustomFilterPopup.TabIndex = 0
 			Me.cbEnableCustomFilterPopup.Text = "Enable Filter Popup Ranges"
 			Me.cbEnableCustomFilterPopup.UseVisualStyleBackColor = True
-'			Me.cbEnableCustomFilterPopup.CheckedChanged += New System.EventHandler(Me.cbEnableCustomFilterPopup_CheckedChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.cbEnableCustomFilterPopup.CheckedChanged += new System.EventHandler(this.cbEnableCustomFilterPopup_CheckedChanged);
 			' 
 			' CustomFilterPopupForm
 			' 
@@ -81,7 +80,8 @@ Namespace CustomFilterPopupSample
 			Me.Controls.Add(Me.splitContainer1)
 			Me.Name = "CustomFilterPopupForm"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.CustomFilterPopupForm_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.CustomFilterPopupForm_Load);
 			CType(Me.pivotGrid, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.splitContainer1.Panel1.ResumeLayout(False)
 			Me.splitContainer1.Panel1.PerformLayout()

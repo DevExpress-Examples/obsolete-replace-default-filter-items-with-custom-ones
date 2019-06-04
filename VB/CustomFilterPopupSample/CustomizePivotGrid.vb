@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports DevExpress.XtraPivotGrid
+﻿Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraPivotGrid.Data
 Imports System.Collections.Generic
 Imports System.Windows.Forms
