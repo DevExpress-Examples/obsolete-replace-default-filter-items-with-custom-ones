@@ -7,7 +7,7 @@
 <!-- default file list end -->
 # How to Modify a Filter Popup to Show Custom Filter Items
 
-This example demonstrate how to replace default filter items with custom items in a filter popup. 
+This example demonstrates how to replace default filter items with custom items in a filter popup. 
 
 You can group individual items in a filter popup based on a criteria and display groups instead of items to save space. Handle the [PivotGridControl.CustomFilterPopupItems](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomFilterPopupItems)  event to substitute default items with group items. To process group items and apply a filter, handle the [PivotGridControl.FieldFilterChanging](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.FieldFilterChanging) event.
 
